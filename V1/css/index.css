@@ -2,14 +2,28 @@ html,body{
     font-family: 'Microsoft JhengHei', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
     /*font-family: 'Open Sans','Helvetica Neue',Arial,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;*/
     color: #fff;
-    background: #f8f8f8;
+    background-color: #3f3f3f;
 }
 .war{
 	width: 90%;
 	/*min-width: 1000px;*/
     margin: 0 auto;
 }
-
+input{
+    margin-top: 10px;
+	padding: 5px 10px;
+    width: 190px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    float: left;
+    border: 0;
+    background: #FFF;
+    color: #14191e;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
 /*header-----------------------------------------------------------------*/
 header{
     z-index: 1000;
@@ -53,15 +67,15 @@ nav{
 }
 .content_war{
     margin: 20px auto;
-    color: #666;
+    /*color: #666;*/
 }
 .content_list{
 	height: auto;
-	background: #fff;
+    background-color: #3f3f3f;
 	border-radius: 5px;
-	padding: 10px;
+	/*padding: 10px;*/
 	margin-bottom: 20px;
-	box-shadow: 1px 1px 5px #ccc;
+	/*box-shadow: 1px 1px 5px #ccc;*/
 }
 .content_list_title{
 	font-size: 18px;
@@ -80,34 +94,37 @@ nav{
 	line-height: 22px;
 }
 .main_classify_name{
-	height: 22px;
-	margin: 10px 0;
+	height: 36px;
+	margin: 5px 0;
+	line-height: 36px;
 	float: left;
 	width: 150px;
 	color: #22F2C8;
-	background: url('../images/bg.png') no-repeat;
 	text-align: center;
+	background-color: #666;
 	border-radius: 3px 0 0 3px;
 	margin-right: 10px;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: bold;
 	position: relative;
 }
 .main_classify_war{
 	overflow: hidden;
-	padding: 10px;
+	/*padding: 10px;*/
 	font-size: 14px;
 }
 .main_classify_war:hover{
-	background-color: #eee;
+	background-color: #303030;
 }
 .main_classify_list{
-	color: #666;
+	color: #FFF;
+	line-height: 46px;
 	padding: 0 10px;
 	float: left;
 }
 .main_classify_list:hover{
 	color: #22F2C8;
+	background-color: #666;
 }
 .link_me{
 	width: 25%;
