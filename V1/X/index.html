@@ -24,17 +24,7 @@
       SEARCH_SUGGEST_PATH: "http://search.ximalaya.com/suggest"
     };
     
-    var jg = href.indexOf("#_");
-    var needrec=false;
 
-    if(jg>0){
-      localStorage.setItem("qudaohao",href.substring(jg+2));
-      href = href.substring(0,jg+1);
-      needrec=true;
-    }
-    if(needrec || href.indexOf("/#")>=0 ){
-      
-    }
     })();
   </script>
 
@@ -285,51 +275,7 @@
 
 <script src="http://s1.xmcdn.com/wap/js/share/album.js?v=20151222100242" type="text/javascript"></script>
 
-<script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async='async';a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','http://s1.xmcdn.com/wap/js/lib/analytics.js?v=20151222100242','ga');
 
-  
-  
-    ga('create', 'UA-52877508-1', 'ximalaya.com');
-  
-
-  ga('send', 'pageview');
-
-  (function ($) {
-    var GAControl = function (pObj) {
-        this.dataTag = {
-            Event: "event",
-            Category: "category",
-            Done: "done",
-            Tag: "tag"
-        };
-        this.target = $(pObj);
-        this.init();
-    }
-    GAControl.prototype = {
-        init: function () {
-            this.setOptions();
-        },
-        setOptions: function () {
-            for (var key in this.dataTag) {
-                this[key] = this.target.data(this.dataTag[key]);
-            };
-            window.ga('send', this.Event, this.Category, this.Done, this.Tag);
-        }
-    }
-
-    $(document).ready(function () {
-        if (window.ga !== undefined && window.ga !== null) {
-          $(document).on("click","[data-role='ga']",function(){
-            new GAControl(this);
-          })
-        }
-    });
-  })(jQuery);
-</script>
 
 </body>
 </html>
