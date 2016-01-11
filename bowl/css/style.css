@@ -1,0 +1,29 @@
+/* Mian 兼容*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td, textarea, input { 
+	font-family: "微软雅黑";
+	font-weight: normal; 
+	padding: 0;
+	margin: 0;
+	/*属性允许您以确切的方式定义适应某个区域的具体内容*/
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+body {
+	font-size: 62.5%;
+	-webkit-text-size-adjust: none;/*禁用Webkit内核浏览器的文字大小调整功能*/
+	line-height: 1.5;
+}
+a, a:link, a:active, a:visited, a:hover{
+	color: #233241;
+	text-decoration: none;
+}
+pre{
+	font-size: 12px;
+	width: 100%;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;/*允许独立的滚动区域和触摸回弹*/
+}
+ul{
+	list-style-type: none;
+}
