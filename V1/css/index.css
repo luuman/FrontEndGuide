@@ -142,7 +142,10 @@ nav{
 #footer{
 	background: #303030;
 	height: auto;
-	/*min-width: 1000px;*/
+	/* min-width: 1000px; */
+	bottom: 0;
+	float: left;
+	width: 100%;
 }
 .footer_war{
 	padding: 20px 0 0 0;
