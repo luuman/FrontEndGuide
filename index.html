@@ -14,13 +14,75 @@
 				display: none;
 			}
 		}
+		#anchortitlecontainer {
+		    text-align: center;
+		    color: #fff;
+		    background: #000;
+		    position: absolute;
+		    z-index: 100;
+		    padding: 5px 15px;
+		    font-size: 12px;
+		    line-height: 20px;
+		    transform: translate(-50%);
+		    border-radius: 6px;
+		}
+		#anchortitlecontainer:before {
+		    width: 0;
+		    height: 0;
+		    border-left: 8px solid transparent;
+		    border-right: 8px solid transparent;
+		    border-bottom: 8px solid rgba(0,0,0,.8);
+		    content: '';
+		    position: absolute;
+		    left: 50%;
+		    top: -8px;
+		    margin-left: -8px
+		}
+		#anchortitlecontainer.top:after {
+			border-top-color: transparent;
+			border-bottom: 8px solid rgba(0,0,0,.8);
+			top: -16px;
+			bottom: auto
+		}
+
+		#anchortitlecontainer.left:after {
+			left: 8px;
+			margin: 0
+		}
+
+		#anchortitlecontainer.right:after {
+			right: 8px;
+			left: auto;
+			margin: 0
+		}
+		.logo{
+			width: 30px;
+			margin: 10px 10px 10px 10px;
+		    height: 30px;
+		    float: left;
+		}
+		.Tip{
+			width: 40px;
+			height: 40px;
+			margin-bottom: 50px;
+			position: fixed;
+			bottom: 20px;
+			background: #e74c3c;
+			border-radius: 5px 0 0 5px;
+			text-align: center;
+			line-height: 40px;
+			color: #FFF;
+		}
+		.Tip a{
+			color: #FFF;
+		    font-size: 15px;
+		}
 	</style>
 </head>
 <body>
 	<header>
 		<div id="topBar" class="topBar war">
-
-			<form name="f" onsubmit="return s4()" method="get">
+			<form name="f" onsubmit="return s4()" method="get"><img class="logo" src="/img/favicon.png">
 				<input type="text" name="k" placeholder="请输入搜索的内容..." size="28" onmouseover="this.focus()" onfocus="this.select()"></form>
 			<nav id="nav" class="nav">
 				<ul id="nav_ul" class="nav_ul">
@@ -79,13 +141,9 @@
 							href="http://www.mengma.com/" target="_blank">
 								<div class="main_classify_list">萌码</div>
 							</a>
-							<a title=""
+							<a title="万维网联盟创建于1994年，是WEB技术领域最具权威和影响力的国际中立性技术标准机构"
 							href="http://www.w3cschool.cc/" target="_blank">
 								<div class="main_classify_list">w3cschool</div>
-							</a>
-							<a title=""
-							href="http://www.chuanke.com/" target="_blank">
-								<div class="main_classify_list">百度传课</div>
 							</a>
 							<a title=""
 							href="http://www.jq-school.com/" target="_blank">
@@ -97,7 +155,7 @@
 						<div class="main_classify_name">前端导航</div>
 						<div class="main_classify_war">
 
-							<a title=""
+							<a title="前端网址导航是为国内前端界的朋友们倾力打造的前端资源聚合平台，包含了前端人脉圈子、前端博客导航、CSS/JS/HTML资源教程等内容。"
 							href="http://www.whycss.com/" target="_blank">
 								<div class="main_classify_list">前端网址导航</div>
 							</a>
@@ -116,6 +174,27 @@
 							<a title=""
 							href="http://www.jiawin.com/" target="_blank">
 								<div class="main_classify_list">觉唯</div>
+							</a>
+						</div>
+					</div>
+					<div class="main_classify">
+						<div class="main_classify_name">国外前端</div>
+						<div class="main_classify_war">
+							<a title=""
+							href="http://css-tricks.com/" target="_blank">
+							<div class="main_classify_list">CSS-Tricks</div>
+							</a>
+							<a title=""
+							href="http://www.webplatform.org/" target="_blank">
+							<div class="main_classify_list">WebPlatform</div>
+							</a>
+							<a title="smashingmagazine是为WEB开发人员提供的一个在线杂志"
+							href="http://smashingmagazine.com" target="_blank">
+							<div class="main_classify_list">SmashingMagazine</div>
+							</a>
+							<a title="CSS禅意花园"
+							href="http://www.csszengarden.com/" target="_blank">
+							<div class="main_classify_list">cssZenGarden</div>
 							</a>
 						</div>
 					</div>
@@ -159,7 +238,7 @@
 							href="http://www.oschina.net/" target="_blank">
 								<div class="main_classify_list">开源中国</div>
 							</a>
-							<a title=""
+							<a title="专注于网站前端设计与开发"
 							href="http://www.qianduan.net/" target="_blank">
 								<div class="main_classify_list">前端观察</div>
 							</a>
@@ -257,15 +336,15 @@
 						<div class="main_classify_name">阿里UED</div>
 						<div class="main_classify_war">
 
-							<a title=""
+							<a title="TaoBaoUED | 做地球上最好的 UED"
 							href="http://ued.taobao.org/blog/" target="_blank">
 								<div class="main_classify_list">淘宝UED</div>
 							</a>
-							<a title=""
+							<a title="用户体验设计部博客U一点设计"
 							href="http://www.aliued.cn/" target="_blank">
 								<div class="main_classify_list">阿里巴巴(中文站 )UED</div>
 							</a>
-							<a title=""
+							<a title="我们的每一次思索和设计，争论和坚持，都为追寻一个目的：在更新的屏幕里创造出更好的产品和更优的体验。"
 							href="http://www.aliued.com/" target="_blank">
 								<div class="main_classify_list">阿里巴巴(国际站)UED</div>
 							</a>
@@ -298,8 +377,7 @@
 					<div class="main_classify">
 						<div class="main_classify_name">百度UED</div>
 						<div class="main_classify_war">
-
-							<a title=""
+							<a title="百度联盟用户体验中心"
 							href="http://ued.baidu.com/" target="_blank">
 								<div class="main_classify_list">百度UED</div>
 							</a>
@@ -395,13 +473,13 @@
 							href="http://ued.qunar.com/" target="_blank">
 								<div class="main_classify_list">去哪儿UED</div>
 							</a>
-							<a title=""
+							<a title="携程旅行前端开发团队携程UED，这是一个血液中流淌着创意和活力的团队，在越来越关注严谨和灵活的过程中成长起来，我们对前端的需求如此强烈，如果你也身在其中你会看到"
 							href="http://ued.ctrip.com/" target="_blank">
 								<div class="main_classify_list">携程UED</div>
 							</a>
-							<a title=""
+							<a title="Mozilla 开发者网络MDN"
 							href="https://developer.mozilla.org/zh-CN/" target="_blank">
-								<div class="main_classify_list">Mozilla 开发者网络MDN</div>
+								<div class="main_classify_list">Mozilla</div>
 							</a>
 							<a title=""
 							href="http://www.75team.com/" target="_blank">
@@ -505,19 +583,19 @@
                         href="http://yujiangshui.com/" target="_blank">
                         	<div class="main_classify_list">于江水</div>
                         </a>
-                        <a title=""
+                        <a title="跟大家分享折腾前端和 WordPress 的心得，同时夹杂着生活的点滴，借此遇上一些志同道合的人！"
                         href="http://kayosite.com/" target="_blank">
                         	<div class="main_classify_list">Kayo</div>
                         </a>
-                        <a title=""
+                        <a title="90后天蝎男，前端工程师，全栈开发尝试者"
                         href="https://www.bh-lay.com/" target="_blank">
                         	<div class="main_classify_list">剧中人</div>
                         </a>
-                        <a title=""
+                        <a title="cheris——努力成为业界优秀的前端分享博客"
                         href="http://www.cheris.cn/" target="_blank">
                         	<div class="main_classify_list">前端开发博客</div>
                         </a>
-                        <a title=""
+                        <a title="专注于WEB前端开发,分享前端开发教程和前端资讯"
                         href="http://caibaojian.com/" target="_blank">
                         	<div class="main_classify_list">前端开发博客</div>
                         </a>
@@ -709,7 +787,7 @@
                         href="http://www.ruanyifeng.com/home.html" target="_blank">
                         	<div class="main_classify_list">阮一峰</div>
                         </a>
-                        <a title=""
+                        <a title="一位热爱前端开发的码农，喜欢研究一些新鲜的事物，希望结交志趣相投的朋友"
                         href="http://www.lingdublog.com/" target="_blank">
                         	<div class="main_classify_list">零度逍遥</div>
                     	</a>
@@ -1536,6 +1614,55 @@
 						</div>
 					</div>
 					<div class="main_classify">
+						<div class="main_classify_name">插件</div>
+						<div class="main_classify_war">
+							<a title=""
+							href="http://codepen.io/" target="_blank">
+								<div class="main_classify_list">CODEPEN</div>
+							</a>
+							<a title="Firebug插件集成了浏览网页的同时随手可得的丰富开发工具，你可以对任何网页的 CSS、HTML 和 JavaScript 进行实时编辑、调试和监控" 
+							      href="https://addons.mozilla.org/zh-CN/firefox/addon/firebug/" target="_blank">
+							<div class="main_classify_list">FireBUG</div>
+							</a>
+							<a title="css-usage插件用于察看哪些CSS被用到" 
+							      href="https://addons.mozilla.org/zh-CN/firefox/addon/css-usage/" target="_blank">
+							<div class="main_classify_list">cssUsage</div>
+							</a>
+							<a title="YSlow是Yahoo发布的一款基于FireFox的插件，用于全面分析网站性能" 
+							      href="https://addons.mozilla.org/zh-CN/firefox/addon/yslow/" target="_blank">
+							<div class="main_classify_list">YSlow</div>
+							</a>
+							<a title="Web Developer插件用于页面强大的元素分析，它加入了几个菜单与一条工具栏以及多种网页开发者工具" 
+							      href="https://addons.mozilla.org/zh-CN/firefox/addon/web-developer/" target="_blank">
+							<div class="main_classify_list">WebDeveloper</div>
+							</a>
+							<a title="html-validator插件用于验证网站是否遵守w3c标准，装上该插件后，可以在页面源码模式中检测你的html代码" 
+							      href="https://addons.mozilla.org/zh-CN/firefox/addon/html-validator/" target="_blank">
+							<div class="main_classify_list">HtmlValidator</div>
+							</a>
+							<a title="colorzilla插件用于页面去色、渐变生成等" 
+							      href="https://addons.mozilla.org/zh-CN/firefox/addon/colorzilla/" target="_blank">
+							<div class="main_classify_list">colorzilla</div>
+							</a>
+							<a title="httpfox插件用于HTTP分析器的扩展" 
+							      href="https://addons.mozilla.org/ZH-cn/firefox/addon/httpfox/" target="_blank">
+							<div class="main_classify_list">httpfox</div>
+							</a>
+							<a title="chrome dev tools" 
+							      href="https://developers.google.com/chrome-developer-tools/?hl=zh-CN" target="_blank">
+							<div class="main_classify_list">ChromeDevTools</div>
+							</a>
+							<a title="一款IE浏览器调试工具 ：DOM inspector, Javascript debugger, HTTP headers viewer, Cookies viewer" 
+							      href="http://www.debugbar.com/" target="_blank">
+							<div class="main_classify_list">DEBUGGER</div>
+							</a>
+							<a title="" 
+							      href="http://www.microsoft.com/en-us/download/details.aspx?id=18359" target="_blank">
+							<div class="main_classify_list">IEToolbar</div>
+							</a>
+						</div>
+					</div>
+					<div class="main_classify">
 						<div class="main_classify_name">性能测试</div>
 						<div class="main_classify_war">
 
@@ -1769,44 +1896,42 @@
 							href="http://luuman.github.io/Home/" target="_blank">
 								<div class="main_classify_list">主页</div>
 							</a>
-							<a title=""
+							<a title="爱折腾，爱运动，更爱游离于错综复杂的编码与逻辑中，无法自拔。"
 							href="http://luuman.github.io/" target="_blank">
 								<div class="main_classify_list">博客</div>
 							</a>
-							<a title=""
+							<a title="开发项目"
 							href="http://luuman.github.io/works/" target="_blank">
 								<div class="main_classify_list">项目</div>
+							</a>
+							<a title="记录自己学习原生JavaScript的路径"
+							href="http://luuman.github.io/works/" target="_blank">
+								<div class="main_classify_list">原生Js</div>
 							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="content_list">
-				<div class="content_list_title">我的分享</div>
-				<div class="content_list_main">
-					<!-- <div class="link_me">
-					<a href="'+data.blog+'" target="_blank">
-						<img src="./images/me.png" style="height: 60px;" />
-					</a>
-				</div>
-				-->
-				<div class="link_me">
-					<a title=""
-					href="https://github.com/luuman" target="_blank">
-						<img src="./images/github.png" style="height: 60px;" />
-					</a>
-				</div>
-				<div class="link_me">
-					<a title=""
-					href="https://coding.net/u/vman" target="_blank">
-						<img src="./images/coding.png" style="height: 60px;" />
-					</a>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>
-<aside id="backTop"></aside>
+<aside id="backTop">
+	<div class="Tip"><a href="/2015/12/21/FrontEndGuide/" target="_blank">提交</a></div>
+
+</aside>
+<footer id="footer">
+	<div class="footer_war war">
+		<div class="message">
+			Because of love, so love! 
+			</br>内容投稿或建议请联系512769206@qq.com 如果您觉得本站有帮助！
+			</br>让更多的人了解前端、让更多的人熟悉前端、让更多的人痴迷前端，让我们奉献于前端...
+		</div>
+		<div class="declare">
+			Copyright &copy; 2015-2016 &nbsp;
+			<a href="http://luuman.github.io/" target="_blank">京ICP备45006200号</a>
+		</div>
+	</div>
+</footer>
 <script type="text/javascript" src="js/jquery-1.9.1.min.js" ></script>
 <script type="text/javascript" src="js/jquery-1.9.1.min.js" ></script>
 <script type="text/javascript" src="js/jquery.js" ></script>
