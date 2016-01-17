@@ -42,7 +42,30 @@ $(document).ready(function(){
         $("html, body").animate({"scroll-top": hrefHeight-70},600,'easeInOutQuint');
     }
 });
+//a标签title提示
+$(function() {
+    $("a[title]").each(function() {
+        var a = $(this);
+        var title = a.attr('title');
+        if (title == undefined || title == "") return;
+        a.data('title', title).removeAttr('title').hover(
 
+        function() {
+            var offset = a.offset();
+            $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                top: offset.top + a.outerHeight() + 10,
+                left: offset.left + a.outerWidth()/2 + 1
+            }).fadeIn(function() {
+                var pop = $(this);
+                setTimeout(function() {
+                    pop.remove();
+                }, pop.text().length * 800);
+            });
+        }, function() {
+            $("#anchortitlecontainer").remove();
+        });
+    });
+});
 jQuery.easing['jswing'] = jQuery.easing['swing'];
 
 jQuery.extend( jQuery.easing,
