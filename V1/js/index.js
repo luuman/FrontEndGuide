@@ -7,12 +7,12 @@ $(document).ready(function(){
 //      $("html, body").animate({"scroll-top": hrefHeight-70},600,'easeInOutQuint');
 //  };
     
-    //杩斿洖椤堕儴
+    //返回顶部
     $(document).on('click','#backTop',function(){
         $("html, body").animate({"scroll-top":0},600,'easeInOutQuint');
     });
     
-    //椤甸潰婊氬姩鍒拌窛椤堕儴600px鍑虹幇/娑堝け杩斿洖椤堕儴鎸夐挳
+    //页面滚动到距顶部600px出现/消失返回顶部按钮
     $(window).scroll(function(){
         var targetTop = $(this).scrollTop();
 
@@ -24,7 +24,7 @@ $(document).ready(function(){
         }
     });
     
-    //椤剁瀵艰埅璺宠浆
+    //顶端导航跳转
     $(document).on('click','.nav_list',function(){
         var targetId='_'+$(this).attr('href').substr(1);
         var targetHeight=document.getElementById(targetId).offsetTop;
@@ -34,7 +34,7 @@ $(document).ready(function(){
 //      $(this).find('li').css('color','#22F2C8');
     });
     
-    //鍒锋柊椤甸潰璺宠浆
+    //刷新页面跳转
     var hrefId='_'+location.href.split('#')[1];
     //alert(hrefId);
     if(location.href.split('#')[1]){
