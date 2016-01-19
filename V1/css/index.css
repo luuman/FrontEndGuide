@@ -115,6 +115,8 @@ nav{
 }
 .main_classify_war a{
 	float: left;
+	/*首字母大写*/
+	text-transform:capitalize;
 }
 .main_classify_war:hover{
 	background-color: #303030;
@@ -189,6 +191,7 @@ aside{
     transform: translate(-50%);
     border-radius: 6px;
     max-width: 200px;
+    font-family: Verdana,"Lantinghei SC","Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,\5b8b\4f53,sans-serif;
 }
 #anchortitlecontainer:before {
     width: 0;
