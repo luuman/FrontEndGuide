@@ -191,7 +191,9 @@ aside{
     transform: translate(-50%);
     border-radius: 6px;
     max-width: 200px;
-    font-family: Verdana,"Lantinghei SC","Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,\5b8b\4f53,sans-serif;
+    /*font-family: Verdana,"Lantinghei SC","Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,\5b8b\4f53,sans-serif;*/
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform:capitalize;
 }
 #anchortitlecontainer:before {
     width: 0;
