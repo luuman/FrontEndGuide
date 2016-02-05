@@ -233,8 +233,8 @@ aside{
 .Tip{
 	width: 40px;
 	height: 40px;
-	margin-bottom: 50px;
-	position: fixed;
+	margin-bottom: 20px;
+	position: absolute;
 	bottom: 20px;
 	background: #e74c3c;
 	border-radius: 5px 0 0 5px;
