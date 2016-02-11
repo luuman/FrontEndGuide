@@ -6,28 +6,44 @@
 	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png"/>
 	<meta name="viewport" content="width=device-width, initial-scale=0.5" />
 	<link rel="stylesheet" href="css/reset.css" />
+
 	<link rel="stylesheet" href="css/index.css" />
-	<style type="text/css">
-		@media screen and (max-width: 1150px){
-			#nav{
-				display: none;
-			}
-		}
-		.Icon-New{
-			float: left;
-		    color: #1FF3FD;
-		    font-size: 10px;
-		    margin-left: -8px;
-		    /*<i class="Icon-New">NEW</i>*/
-		}
-	</style>
+	<link rel="stylesheet" href="fonts/iconfont.css">
 </head>
 <body>
 	<header>
 		<div id="topBar" class="topBar war">
 			<form name="f" onsubmit="return s4()" method="get">
 				<img class="logo" src="/img/favicon.png">
-				<input type="text" name="k" placeholder="百度：搜索些什么..." size="28" onmouseover="this.focus()" onfocus="this.select()"></form>
+				<!-- <input type="text" name="k" placeholder="百度：搜索些什么..." size="28" onmouseover="this.focus()" onfocus="this.select()"> -->
+				<!-- <input type="submit" value="搜索"> -->
+			</form>
+			<div class="search-hd">
+			    <form action="https://www.baidu.com/s" method="get" id="searchForm">
+			        <div class="search-status">
+			            <div class="search-select">
+			                <input type="text" class="search-val" placeholder="请输入您要查找的内容" autocomplete="off" value="" name="wd" id="keywords"/>
+			                <ul class="options">
+			                    <li>
+			                        <a href="http://luuman.github.io/Home/">luuman</a>
+			                    </li>
+			                    <li>
+			                        <a href="javascript:;">Hexo</a>
+			                    </li>
+			                    <li>
+			                        <a href="javascript:;">Demo</a>
+			                    </li>
+			                    <li>
+			                        <a href="javascript:;">banner</a>
+			                    </li>
+			                </ul>
+			            </div>
+			        </div>
+			        <input type="hidden" name="type" value='project' id="sType"/>
+			        <a class="search-hd-btn" href="javascript:;"> <i class="iconfont icon-search"></i>
+			        </a>
+			    </form>
+			</div>
 			<nav id="nav" class="nav">
 				<ul id="nav_ul" class="nav_ul">
 					<a href="#page_0" class="nav_list">
@@ -105,7 +121,7 @@
 						<div class="main_classify_war">
 
 							<a title="万维网联盟创建于1994年，是WEB技术领域最具权威和影响力的国际中立性技术标准机构"
-							href="http://www.w3cschool.cc/" target="_blank">
+							href="http://www.w3school.com.cn/" target="_blank">
 								<div class="main_classify_list">w3cschool</div>
 							</a>
 							<a title="学的不仅是技术，更是梦想！"
@@ -1054,6 +1070,10 @@
 							<a title="Knockout 是个JavaScript library，帮助创建丰富的显示和编辑器UI，通过干净的底层数据模型，你可以在任何时候动态更新UI的选择部分"
 							href="http://knockoutjs.com/" target="_blank">
 								<div class="main_classify_list">knockoutjs</div>
+							</a>
+							<a title="数据驱动的组件，为现代化的 Web 界面而生"
+							href="http://cn.vuejs.org/" target="_blank">
+								<div class="main_classify_list">vuejs</div>
 							</a>
 						</div>
 					</div>
@@ -2577,35 +2597,34 @@
 			</div>
 		</div>
 	</div>
-</div>
-</div>
-<aside id="backTop">
-<div class="Tip">
-	<a href="/2015/12/21/FrontEndGuide/" target="_blank">提交</a>
-</div>
-</aside>
-<footer id="footer">
-<div class="footer_war war">
-	<div class="message">Cruising In The Code Of Life!</br>
-	内容投稿或建议请联系512769206@qq.com 如果您觉得本站有帮助！
-</br>
-让更多的人了解前端、让更多的人熟悉前端、让更多的人痴迷前端，让我们奉献于前端...
-</div>
-<div class="declare">
-Copyright &copy; 2015-2016 &nbsp;
-<a href="http://luuman.github.io/" target="_blank">京ICP备45006200号</a>
-</div>
-</div>
-</footer>
-<script type="text/javascript" src="js/jquery-1.9.1.min.js" ></script>
-<script type="text/javascript" src="js/jquery-1.9.1.min.js" ></script>
-<script type="text/javascript" src="js/jquery.js" ></script>
-<script type="text/javascript" src="js/index.js" ></script>
-<script language="javascript">
-	// 百度搜索
+	</div>
+	</div>
+	<aside id="backTop">
+	<div class="Tip">
+		<a href="/2015/12/21/FrontEndGuide/" target="_blank">提交</a>
+	</div>
+	</aside>
+	<footer id="footer">
+	<div class="footer_war war">
+		<div class="message">Cruising In The Code Of Life!</br>
+		内容投稿或建议请联系512769206@qq.com 如果您觉得本站有帮助！
+	</br>
+	让更多的人了解前端、让更多的人熟悉前端、让更多的人痴迷前端，让我们奉献于前端...
+	</div>
+	<div class="declare">
+	Copyright &copy; 2015-2016 &nbsp;
+	<a href="http://luuman.github.io/" target="_blank">京ICP备45006200号</a>
+	</div>
+	</div>
+	</footer>
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/index.js" ></script>
+
+	<script language="javascript">
+		// 百度搜索
 		function s4() {
 			var v = f.k.value
-			window.open("http://www.baidu.com/baidu?tn=592mm&word=" + v, "7");
+			window.open("http://www.baidu.com/s?wd=" + v, "7");
 			return false;
 		}
 	</script>
