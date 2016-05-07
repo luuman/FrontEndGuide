@@ -1,5 +1,53 @@
-
 $(document).ready(function(){
+    // 数据遍历
+    var oNavs = "";
+    var oFronts = "";
+
+    var nav_lists;
+    var oBject;
+    for(sum1 in FrontGuide['main']){
+        oBject = FrontGuide['main'][sum1];
+        var oPageT1 = oBject['pageT1'];
+        nav_lists = '<a href="#page_' + sum1 + '" class="nav_list"><li>' + oPageT1 + '</li></a>';
+        oNavs+= nav_lists;
+
+        var pageC1 = oBject['pageC1'];
+
+        oFronts += '<div id="_page_' + sum1 + '" class="content_list"><div class="content_list_title">' + oPageT1 + '</div><div class="content_list_main"><div class="main_classify">';
+        for(sum2 in pageC1){
+            var oPage2 = pageC1[sum2];
+            var oPageT2 = oPage2['pageT2'];
+            // console.log(oPageT2);
+            // console.log(sum2);
+            var pageC2 = oPage2['pageC2'];
+
+            oFronts += '<div class="main_classify_name">' + oPageT2 + '</div><div class="main_classify_war">';
+            for(sum3 in pageC2){
+                var oPage3 = pageC2[sum3];
+                var oNames = oPage3['Name'];
+                var oTitles = oPage3['Title'];
+                var oHrefs = oPage3['Href'];
+                var oNews = oPage3['New'];
+                var nNt = "";
+                if(oNews == 1){
+                    nNt = '<i class="Icon-New">NEW</i>';
+                }
+                // console.log(oNames);
+                // console.log(oTitles);
+                // 
+                oFronts += '<a title="' + oTitles + '" href="' + oHrefs + '" target="_blank"><div class="main_classify_list">' + oNames + '</div></a>' + nNt;
+            }
+            oFronts += "</div>";
+        }
+        oFronts += "</div></div></div>";
+    }
+    // #nav
+    oNavs = '<ul id="nav_ul" class="nav_ul">' + oNavs + '</ul>';
+    oFronts = '<div id="content_war" class="content_war war">' + oFronts + '</div>';
+    // console.log(oFronts);
+
+    document.getElementById("nav").innerHTML = oNavs;
+    document.getElementById("content").innerHTML = oFronts;
     
 //  window.onload=function(){
 //      var hrefId='_'+location.href.split('#')[1];
@@ -424,4 +472,9 @@ selectBoxSer = function(box){
 
 });
 };
-
+// 百度搜索
+function s4() {
+    var v = f.k.value
+    window.open("http://www.baidu.com/s?wd=" + v, "7");
+    return false;
+}

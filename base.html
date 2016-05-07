@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+    .country{
+        width: 200px;
+        height: 50px;
+        background-color: #EFA;
+        display:inline-block;
+        margin-left: 10px;
+    }
+    .people{
+        width: auto;
+        background-color: #AFE;
+        margin: 10px;
+    }
+    .person{
+        width: 120px;
+        background-color: #FEA;
+        display:inline-block;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+</style>
+<meta charset="utf-8">
+<title>测试</title>
+
+<script type="text/javascript" src="js/jquery.js" ></script>
+<script type="text/javascript" src="js/data.js" ></script>
+</head>
+<body>
+<div>
+    <nav id="nav" class="nav">
+    </nav>
+    <div id="content" class="content">
+
+    </div>
+</div>
+<script type="text/javascript">
+	function getinfo(obj,country)
+	{
+	    $("."+country+"_people").show();
+	}
+	function leave(obj,country)
+	{
+	    $("."+country+"_people").hide();
+	}
+	$(document).ready(function(){
+	  var data = {
+	        "message":"",
+	        "error":"false",
+	        "human":[{
+                "country":"china",
+                "amount":"2",
+                "people":[
+                    {"id":"01","name":"zhangsan","sex":"male","job":"teacher"},
+                    {"id":"02","name":"lisi","sex":"female","job":"worker"}
+                ]},{
+                "country":"America",
+                "amount":"2",
+                "people":[
+                    {"id":"01","name":"john","sex":"male","job":"teacher"},
+                    {"id":"02","name":"Lily","sex":"female","job":"worker"}
+                ]},{
+                "country":"Japan",
+                "amount":"2",
+                "people":[
+                    {"id":"01","name":"Saxi","sex":"male","job":"teacher"},
+                    {"id":"02","name":"Baga","sex":"female","job":"worker"}
+                ]}
+	        ]};
+	        var country;
+	        var amount;
+	        var people;
+
+	        var html_top = "";
+	        var html_bot = "";
+	        var object;
+	        var count = 0;
+	        for(x in data['human']){
+	            count++;
+	            object = data['human'][x];
+	            // console.log(object);
+	            country = object['country'];
+	            amount = object['amount'];
+	            people = object['people'];
+
+	            div_country = "<div class='country' style='cursor:pointer' onmouseleave = 'leave(this,\""+country+"\")' onmouseover = 'getinfo(this,\""+country+"\")' id='"+country+"'>";
+	            html_top += div_country+"<p>"+country+"</p>";
+	            html_bot += "<div class='people "+country+"_people'>";
+	            for(m in people){
+	                person = people[m];
+	                html_bot += "<div class='person' id='"+country+"_"+person['id']+"_people'>";
+	                html_bot += "<p>name:"+person['name']+"</p>";
+	                html_bot += "<p>sex:"+person['sex']+"</p>";
+	                html_bot += "<p>job:"+person['job']+"</p>";
+	                html_bot += "</div>";
+	            }
+	            html_bot += "</div>";
+	            html_top += "</div>";
+	        }
+	        $("#container").css("width",count*210+"px");
+	        $("#container").html(html_top+html_bot);
+
+	        $(".people").hide();
+	});
+	// for(var o in FrontGuide){  alert(o);  alert(FrontGuide[o]);  alert("text:"+FrontGuide[o].name+" value:"+FrontGuide[o].age );
+			
+</script>
+</body>
+</html>
